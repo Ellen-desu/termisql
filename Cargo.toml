@@ -1,0 +1,29 @@
+[package]
+name = "termisql"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+authors = ["Ellen-desu <gilangramadhani.dev@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Ellen-desu/termisql"
+description = "A lightweight and asynchronous Text User Interface(TUI) database visualizer"
+categories = ["asynchronous", "tui"]
+keywords = ["database", "tui", "async", "sql"]
+
+[dependencies]
+# Main deps
+crossterm = "0.29.0"
+ratatui = "0.29.0"
+scopeguard = "1.2.0"
+tokio = { version = "1.48.0", features = ["rt-multi-thread", "macros", "sync"] }
+sqlx = { version = "0.8.6", features = ["runtime-tokio", "sqlite", "mysql", "chrono"] }
+chrono = "0.4.42"
+
+# Parser
+clap = { version = "4.5.51", features = ["derive"] }
+url = "2.5.7"
+
+# Logger
+color-eyre = "0.6.5"
+
