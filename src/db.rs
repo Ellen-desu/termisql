@@ -50,7 +50,7 @@ impl Database {
                     MySqlPoolOptions::new()
                         .min_connections(args.min_connections)
                         .max_connections(args.max_connections)
-                        .acquire_timeout(Duration::from_millis(1))
+                        .acquire_timeout(Duration::from_millis(100))
                         .connect_with(conn)
                         .await?,
                 )
